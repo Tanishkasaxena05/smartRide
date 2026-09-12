@@ -395,6 +395,15 @@ st.caption(
     f"filter selection ({len(filtered):,} matching rows)."
 )
 
+search_location = st.selectbox(
+    "🔍 Search Pickup Location",
+    ["All"] + sorted(
+        filtered["Pickup Location"]
+        .dropna()
+        .unique()
+    )
+)
+
 display_columns = [
     "Pickup Location",
     "hour",
@@ -404,14 +413,24 @@ display_columns = [
     "Demand_Category"
 ]
 
+table_source = filtered.copy()
+
+if search_location != "All":
+
+    table_source = table_source[
+        table_source["Pickup Location"]
+        == search_location
+    ]
+if table_source.empty:
+    st.warning("No matching pickup locations found.")
+    
 display_df = (
-    filtered[
+    table_source[
         display_columns
     ]
     .head(500)
     .reset_index(drop=True)
 )
-
 
 # ==================================================
 # TABLE NUMBER COLUMN
