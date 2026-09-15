@@ -12,7 +12,7 @@ from src.predictor import predict_category
 # ==================================================
 
 st.set_page_config(
-    page_title="SmartRide NCR",
+    page_title="SmartRide",
     page_icon="🚕",
     layout="wide"
 )
