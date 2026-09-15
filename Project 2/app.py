@@ -65,7 +65,7 @@ geo, dataset = load_data()
 # ==================================================
 
 st.title(
-    "🚕 SmartRide NCR"
+    "🚕 SmartRide Application"
 )
 
 st.subheader(
