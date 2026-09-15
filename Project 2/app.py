@@ -6,7 +6,6 @@ from streamlit_folium import st_folium
 
 from src.predictor import predict_category
 
-
 # ==================================================
 # PAGE CONFIG
 # ==================================================
