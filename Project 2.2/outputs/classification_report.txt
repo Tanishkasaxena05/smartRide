@@ -1,0 +1,11 @@
+Selected model: Logistic Regression
+
+              precision    recall  f1-score   support
+
+        High       0.94      0.83      0.88      1400
+         Low       0.83      0.89      0.86      1590
+      Medium       0.71      0.74      0.73      1390
+
+    accuracy                           0.82      4380
+   macro avg       0.83      0.82      0.82      4380
+weighted avg       0.83      0.82      0.82      4380

@@ -1,0 +1,12 @@
+pandas
+numpy
+scikit-learn
+xgboost
+lightgbm
+catboost
+streamlit
+streamlit-folium
+folium
+holidays
+joblib
+matplotlib
